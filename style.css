@@ -1,0 +1,26 @@
+.brick-by-brick-js-oauth {
+  display: inline;
+}
+
+.brick-by-brick-js-oauth ul {
+  list-style-type: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.brick-by-brick-js-oauth ul li {
+  display: inline;
+}
+
+.brick-by-brick-js-oauth ul li::after {
+  content: ', ';
+}
+
+.brick-by-brick-js-oauth ul li:nth-last-child(2):after {
+  content: ' or ';
+}
+
+.brick-by-brick-js-oauth ul li:last-child:after {
+  content: '';
+}
