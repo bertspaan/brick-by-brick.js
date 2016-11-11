@@ -93,7 +93,7 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
         .text('log out')
         .on('click', function () {
           d3.json(data.disconnect, function () {
-            getOAuth ()
+            location.reload()
           })
         })
     } else {
