@@ -41,11 +41,6 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
       .then(parseJSON)
   }
 
-  // function isFunction (functionToCheck) {
-  //   var getType = {}
-  //   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]'
-  // }
-
   function setError (element, err) {
     d3.select(element)
       .append('span')
@@ -197,28 +192,3 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
     postSubmission
   }
 }
-
-
-
-
-
-
-
-
-// function setError(err) {
-//   var message
-
-//   if (err) {
-//     if (err.status === 404) {
-//       message = 'Done! Finished! Nothing to do!'
-//     } else {
-//       message = err.message
-//     }
-//   } else {
-//     message = 'Error getting task from server'
-//   }
-
-//   d3.select('#error > *').remove()
-//   d3.select('#error').append('span').html(message)
-// }
-
