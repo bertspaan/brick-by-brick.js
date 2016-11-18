@@ -180,10 +180,11 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
         }
       })
       .catch(function (err) {
-        console.err(err.message)
+        console.error(err.message)
       })
   }
 
+  // TODO: only chechAuthNeeded when collections param is empty
   checkAuthNeeded()
   getOAuth()
 
