@@ -18,7 +18,12 @@ See the [select-landmark project](https://github.com/nypl-spacetime/select-landm
 
 ## See also
 
+### Brick-by-Brick API
+
 - https://github.com/nypl-spacetime/brick-by-brick
+
+### Crowdsourcing clients
+
 - https://github.com/nypl-spacetime/surveyor
 - https://github.com/nypl-spacetime/label-fields
 - https://github.com/nypl-spacetime/select-landmark
