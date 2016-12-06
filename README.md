@@ -23,3 +23,4 @@ See the [select-landmark project](https://github.com/nypl-spacetime/select-landm
 - https://github.com/nypl-spacetime/label-fields
 - https://github.com/nypl-spacetime/select-landmark
 - https://github.com/nypl-spacetime/tagmap
+- https://github.com/nypl-spacetime/trace-maps
