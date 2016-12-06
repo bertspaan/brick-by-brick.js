@@ -3,6 +3,7 @@
 //   - fetch polyfill
 //   - promise polyfill
 
+// TODO: add organizations filter/param
 function BrickByBrick (apiUrl, taskId, collections, elements) {
   function checkStatus (response) {
     if (response.status >= 200 && response.status < 300) {
@@ -45,6 +46,19 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
     d3.select(element)
       .append('span')
       .text(err.message)
+  }
+
+  function getItems () {
+    var url = apiUrl + 'tasks/' + taskId + '/items'
+
+    if (collections && collections.length) {
+        url += '?collection=' + collections.join(',')
+    }
+
+    return getJSON(url)
+      .catch(function (err) {
+        throw err
+      })
   }
 
   function getItem (organizationId, itemId) {
@@ -160,6 +174,8 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
   }
 
   function checkAuthNeeded () {
+    // TODO: if collections or organizations is set, then check if authorized for those collections or organizations
+
     var url = apiUrl + 'tasks/' + taskId + '/collections/authorized'
     if (collections && collections.length) {
       url += '?collection=' + collections.join(',')
@@ -190,6 +206,7 @@ function BrickByBrick (apiUrl, taskId, collections, elements) {
 
   return {
     getItem,
+    getItems,
     postSubmission
   }
 }
